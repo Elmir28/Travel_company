@@ -1,0 +1,667 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5em;
+}
+
+.navbar_main {
+    width: 100%;
+    min-height: 11vh;
+    display: flex;
+    justify-content: center;
+    float: left;
+}
+
+.navbar_center {
+    width: 75%;
+    min-height: inherit;
+    float: left;
+}
+
+.logo {
+    width: 20%;
+    min-height: inherit;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 80%;
+    min-height: inherit;
+    float: left;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+}
+
+.menu ul li {
+    list-style-type: none;
+    float: left;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 31px;
+    font-size: 18px;
+    color: #000;
+    transition: .3s linear;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.menu ul li ul {
+    display: none;
+}
+
+.menu ul li ul li {
+    position: absolute;
+    top: 81px;
+    z-index: 1000;
+}
+
+.menu ul li ul li a {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 240px;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.black_line{
+    width: 100%;
+    min-height: 4px;
+    background-color: #000;
+    float: left;
+}
+
+.grap1 {
+    position: absolute;
+    top: 84px;
+    width: 240px;
+}
+
+.menu ul li:hover>ul {
+    display: inline;
+}
+
+#frame {
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+#frame input[type=radio] {
+    display: none;
+}
+
+#frame label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slides {
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#frame1:checked~#slides .inner {
+    margin-left: 0;
+}
+
+#frame2:checked~#slides .inner {
+    margin-left: -100%;
+}
+
+#frame3:checked~#slides .inner {
+    margin-left: -200%;
+}
+
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.7, 0, 0.2, 1);
+    width: 400%;
+    line-height: 0;
+    height: 85vh;
+}
+
+#slides .frame {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #FFF;
+    flex-direction: column;
+}
+
+#slides .frame_1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/xinaqliq.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.frame-content {
+    width: 50%;
+    min-height: 50vh;
+    line-height: 2;
+    letter-spacing: 0.2px;
+}
+
+.frame-content h1 {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.about_quba {
+    padding-bottom: 6vh;
+}
+
+.text_frame {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+.text_frame:hover {
+    background-color: rgb(29, 107, 107);
+    transition: 0.5s;
+}
+
+#slides .frame_2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Azerbaijan-Gabala-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slides .frame_3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/qobustan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about_qobustan {
+    padding-top: 2vh;
+}
+
+#controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+    float: left;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+    float: left;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#frame1:checked~#controls label:nth-child(1),
+#frame2:checked~#controls label:nth-child(2),
+#frame3:checked~#controls label:nth-child(3) {
+    background:
+        url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    display: block;
+}
+
+#frame1:checked~#controls label:nth-last-child(1),
+#frame2:checked~#controls label:nth-last-child(2),
+#frame3:checked~#controls label:nth-last-child(3) {
+    background:
+        url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    display: block;
+}
+
+#bullets {
+    width: 100%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    position: absolute;
+    top: 86vh;
+    z-index: 20;
+}
+
+#bullets label {
+    display: inline-block;
+    width: 2%;
+    height: 4vh;
+    border-radius: 100%;
+    background: #fff;
+    margin: 0 10px;
+}
+
+#frame1:checked~#bullets label:nth-child(1),
+#frame2:checked~#bullets label:nth-child(2),
+#frame3:checked~#bullets label:nth-child(3) {
+    background: #444;
+}
+
+@media screen and (max-width: 900px) {
+
+    #frame1:checked~#controls label:nth-child(1),
+    #frame2:checked~#controls label:nth-child(2),
+    #frame3:checked~#controls label:nth-child(3),
+    #frame1:checked~#controls label:nth-last-child(1),
+    #frame2:checked~#controls label:nth-last-child(2),
+    #frame3:checked~#controls label:nth-last-child(3) {
+        margin: 0;
+    }
+
+    #slides {
+        max-width: calc(100% - 140px);
+        margin: 0 auto;
+    }
+}
+
+.tour_1 {
+    width: 100%;
+    min-height: 17vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    color: #555;
+    padding-bottom: 5vh;
+    transition: .3s linear;
+
+}
+
+.main_section2 {
+    width: 100%;
+    min-height: 65vh;
+    float: left;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+}
+
+.section2 {
+    width: 65%;
+    min-height: 65vh;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_e {
+    min-height: 20vh;
+    width: 32%;
+    background-color: #ffffff;
+    float: left;
+    padding: 3vh;
+    position: relative;
+}
+
+.img_tour1 {
+    width: 100%;
+    min-height: 25vh;
+    float: left;
+    background-image: url("https://ati.az/storage/1511/lahic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_tour2 {
+    width: 100%;
+    min-height: 25vh;
+    float: left;
+    background-image: url("https://ati.az/storage/1515/shamahi-gabala.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_tour3 {
+    width: 100%;
+    min-height: 25vh;
+    float: left;
+    background-image: url("https://ati.az/storage/1514/qobustan-+-absheron.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_tour4 {
+    width: 100%;
+    min-height: 25vh;
+    float: left;
+    background-image: url("https://ati.az/storage/1523/3-%D0%BD%D0%BE%D1%87%D0%B8-4-%D0%B4%D0%BD%D1%8F--1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_tour5 {
+    width: 100%;
+    min-height: 25vh;
+    float: left;
+    background-image: url("https://ati.az/storage/1524/3-%D0%BD%D0%BE%D1%87%D0%B8-4-%D0%B4%D0%BD%D1%8F--2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_tour6 {
+    width: 100%;
+    min-height: 25vh;
+    float: left;
+    background-image: url("https://ati.az/storage/1525/3-%D0%BD%D0%BE%D1%87%D0%B8-4-%D0%B4%D0%BD%D1%8F--3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card_e h3 {
+    padding-top: 28vh;
+    color: #417094;
+}
+
+.card_e p {
+    padding-top: 4vh;
+    line-height: 1.5em;
+    color: #555;
+}
+
+.cash {
+    width: 100%;
+    min-height: 3vh;
+    float: left;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-top: 4vh;
+    position: absolute;
+    top: 56vh;
+    right: 3vh;
+}
+
+.tour_2 {
+    width: 100%;
+    min-height: 17vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    color: #555;
+    padding-top: 18vh;
+}
+
+.main_section3 {
+    width: 100%;
+    min-height: 114vh;
+    float: left;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+}
+
+.section3 {
+    width: 65%;
+    min-height: 114vh;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10vh;
+}
+
+.cash1 {
+    width: 100%;
+    min-height: 3vh;
+    float: left;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-top: 4vh;
+    position: absolute;
+    top: 95vh;
+    right: 3vh;
+}
+
+.main_section4 {
+    width: 100%;
+    min-height: 50vh;
+    float: left;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+}
+
+.section4 {
+    width: 65%;
+    min-height: 50vh;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block_car {
+    width: 49%;
+    min-height: 50vh;
+    background-color: #fff;
+    float: left;
+}
+
+.car1 {
+    width: 43%;
+    min-height: 20vh;
+    background-image: url('https://ati.az/storage/335/conversions/Mercedes-Sprinter-1-thumb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+
+.car2 {
+    width: 43%;
+    min-height: 20vh;
+    background-image: url('https://ati.az/storage/340/conversions/Mercedes-Vito-2008-01-3-thumb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+
+.car3 {
+    width: 43%;
+    min-height: 21vh;
+    background-image: url('https://ati.az/storage/346/conversions/Hyuindai-Santa-Fe-2010-01-1-thumb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+
+.car4 {
+    width: 43%;
+    min-height: 21vh;
+    background-image: url('https://ati.az/storage/352/conversions/Toyota-Land-Cruiser-01-1-thumb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+
+.block_car1 {
+    width: 49%;
+    min-height: 50vh;
+    background-color: #fff;
+    float: left;
+    padding: 3vh;
+    text-align: justify;
+    position: relative;
+    color: #666;
+}
+
+.block_car1 p {
+    padding-top: 7vh;
+}
+
+.btn_car {
+    position: absolute;
+    top: 303px;
+    left: 154px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 0;
+    text-decoration: none;
+    background-color: #ec5a5a;
+    color: #fff;
+    border-radius: 3%;
+    cursor: pointer;
+    text-align: center;
+    transition: all .5s;
+}
+
+.btn_car:hover {
+    background-color: #f50b0b;
+}
+
+.footer {
+    width: 100%;
+    min-height: 40vh;
+    float: left;
+    background-color: #d3d3d3;
+    padding-top: 18vh;
+    display: flex;
+    justify-content: center;
+}
+
+.block_footer {
+    width: 100%;
+    min-height: 40vh;
+    background-color: #082f4e;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section_footer {
+    width: 18%;
+    min-height: 40vh;
+    float: left;
+    padding-top: 2vh;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.section_footer1 {
+    width: 18%;
+    min-height: 40vh;
+    float: left;
+    padding-top: 2vh;
+    color: #ffffff;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+.section_footer a img {
+    padding-bottom: 2vh;
+}
+
+.icon_e {
+    font-size: 3vh;
+    padding: 5px;
+}
+
+.icon_e a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 3vh;
+    padding: 5px;
+}
+
+.icon_e a:hover {
+    color: #6200ff;
+    transition: all .5s;
+}
+
+#info_e {
+    padding-top: 0px;
+}
+
+.section_footer ul {
+    padding-top: 2vh;
+}
+
+.section_footer ul a {
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+}
+
+.section_footer p {
+    padding-top: 2vh;
+}
+
+.section_footer ul a li:hover {
+    padding-left: 10px;
+    transition: all .5s;
+    color: #6200ff;
+}
+
+.add_footer {
+    width: 100%;
+    min-height: 3vh;
+    background-color: #3d3737;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.anchor {
+    width: 30px;
+    height: 40px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 100;
+
+}
+
+.icon_up {
+    font-size: 4vh;
+    color: #ffffff;
+    background-color: #751212;
+    border-radius: 30%;
+}
