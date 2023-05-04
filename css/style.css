@@ -5,286 +5,178 @@
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.5em;
 }
+    .navigation {
+        height: 70px;
+        background: #262626;
+      }
+      .brand {
+        position: absolute;
+        padding-left: 20px;
+        float: left;
+        line-height: 70px;
+        text-transform: uppercase;
+        font-size: 1.4em;
+      }
+      .brand a, .brand a:visited {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .nav-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      nav {
+        float: right;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        float: left;
+        position: relative;
+      }
+      nav ul li a, nav ul li a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: 70px;
+        background: #262626;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      nav ul li a:hover, nav ul li a:visited:hover {
+        background: #2581DC;
+        color: #ffffff;
+      }
+      nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+        padding-left: 4px;
+        content: ' ▾';
+      }
+      nav ul li ul li {
+        min-width: 190px;
+      }
+      nav ul li ul li a {
+        padding: 15px;
+        line-height: 20px;
+      }
+      .nav-dropdown {
+        position: absolute;
+        display: none;
+        z-index: 1;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+      }
+      /* Mobile navigation */
+      .nav-mobile {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #262626;
+        height: 70px;
+        width: 70px;
+      }
+      @media only screen and (max-width: 798px) {
+        .nav-mobile {
+          display: block;
+        }
+        nav {
+          width: 100%;
+          padding: 70px 0 15px;
+        }
+        nav ul {
+          display: none;
+        }
+        nav ul li {
+          float: none;
+        }
+        nav ul li a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        nav ul li ul li a {
+          padding-left: 30px;
+        }
+        .nav-dropdown {
+          position: static;
+        }
+      }
+      @media screen and (min-width: 799px) {
+        .nav-list {
+          display: block !important;
+        }
+      }
+      #nav-toggle {
+        position: absolute;
+        left: 18px;
+        top: 22px;
+        cursor: pointer;
+        padding: 10px 35px 16px 0px;
+      }
+      #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: #ffffff;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+      }
+      #nav-toggle span:before {
+        top: -10px;
+      }
+      #nav-toggle span:after {
+        bottom: -10px;
+      }
+      #nav-toggle.active span {
+        background-color: transparent;
+      }
+      #nav-toggle.active span:before, #nav-toggle.active span:after {
+        top: 0;
+      }
+      #nav-toggle.active span:before {
+        transform: rotate(45deg);
+      }
+      #nav-toggle.active span:after {
+        transform: rotate(-45deg);
+      }
+      article {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px;
+    }
 
-.navbar_main {
+#style1{
     width: 100%;
-    min-height: 11vh;
-    display: flex;
-    justify-content: center;
-    float: left;
-}
-
-.navbar_center {
-    width: 75%;
-    min-height: inherit;
-    float: left;
-}
-
-.logo {
-    width: 20%;
-    min-height: inherit;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu {
-    width: 80%;
-    min-height: inherit;
-    float: left;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    position: relative;
-}
-
-.menu ul li {
-    list-style-type: none;
-    float: left;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    padding: 31px;
-    font-size: 18px;
-    color: #000;
-    transition: .3s linear;
-}
-
-.menu ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
-    transition: 0.5s;
-}
-
-.menu ul li ul {
-    display: none;
-}
-
-.menu ul li ul li {
-    position: absolute;
-    top: 81px;
-    z-index: 1000;
-}
-
-.menu ul li ul li a {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    width: 240px;
-    display: flex;
-    background-color: #ffffff;
-}
-
-.black_line{
-    width: 100%;
-    min-height: 4px;
-    background-color: #000;
-    float: left;
-}
-
-.grap1 {
-    position: absolute;
-    top: 84px;
-    width: 240px;
-}
-
-.menu ul li:hover>ul {
-    display: inline;
-}
-
-#frame {
-    width: 100%;
-    text-align: center;
-    float: left;
-}
-
-#frame input[type=radio] {
-    display: none;
-}
-
-#frame label {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#slides {
-    position: relative;
-    z-index: 1;
-}
-
-#overflow {
-    width: 100%;
-    overflow: hidden;
-}
-
-#frame1:checked~#slides .inner {
-    margin-left: 0;
-}
-
-#frame2:checked~#slides .inner {
-    margin-left: -100%;
-}
-
-#frame3:checked~#slides .inner {
-    margin-left: -200%;
-}
-
-#slides .inner {
-    transition: margin-left 800ms cubic-bezier(0.7, 0, 0.2, 1);
-    width: 400%;
-    line-height: 0;
     height: 85vh;
-}
-
-#slides .frame {
-    width: 25%;
     float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #FFF;
-    flex-direction: column;
-}
-
-#slides .frame_1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/xinaqliq.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/xinaliq.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.frame-content {
-    width: 50%;
-    min-height: 50vh;
-    line-height: 2;
-    letter-spacing: 0.2px;
-}
-
-.frame-content h1 {
-    min-height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5vh;
-}
-
-.about_quba {
-    padding-bottom: 6vh;
-}
-
-.text_frame {
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 10px;
-}
-
-.text_frame:hover {
-    background-color: rgb(29, 107, 107);
-    transition: 0.5s;
-}
-
-#slides .frame_2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Azerbaijan-Gabala-1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#slides .frame_3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/qobustan.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
 }
 
-.about_qobustan {
-    padding-top: 2vh;
-}
-
-#controls {
-    margin: -180px 0 0 0;
+#style2{
     width: 100%;
-    height: 50px;
-    z-index: 3;
-    position: relative;
+    height: 85vh;
     float: left;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Shamaxa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-#controls label {
-    transition: opacity 0.2s ease-out;
-    display: none;
-    width: 50px;
-    height: 50px;
-    opacity: .4;
-    float: left;
-}
-
-#controls label:hover {
-    opacity: 1;
-}
-
-#frame1:checked~#controls label:nth-child(1),
-#frame2:checked~#controls label:nth-child(2),
-#frame3:checked~#controls label:nth-child(3) {
-    background:
-        url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
-    float: right;
-    display: block;
-}
-
-#frame1:checked~#controls label:nth-last-child(1),
-#frame2:checked~#controls label:nth-last-child(2),
-#frame3:checked~#controls label:nth-last-child(3) {
-    background:
-        url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
-    float: left;
-    display: block;
-}
-
-#bullets {
+#style3{
     width: 100%;
-    min-height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 85vh;
     float: left;
-    position: absolute;
-    top: 86vh;
-    z-index: 20;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Qobustan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-#bullets label {
-    display: inline-block;
-    width: 2%;
-    height: 4vh;
-    border-radius: 100%;
-    background: #fff;
-    margin: 0 10px;
-}
-
-#frame1:checked~#bullets label:nth-child(1),
-#frame2:checked~#bullets label:nth-child(2),
-#frame3:checked~#bullets label:nth-child(3) {
-    background: #444;
-}
-
-@media screen and (max-width: 900px) {
-
-    #frame1:checked~#controls label:nth-child(1),
-    #frame2:checked~#controls label:nth-child(2),
-    #frame3:checked~#controls label:nth-child(3),
-    #frame1:checked~#controls label:nth-last-child(1),
-    #frame2:checked~#controls label:nth-last-child(2),
-    #frame3:checked~#controls label:nth-last-child(3) {
-        margin: 0;
-    }
-
-    #slides {
-        max-width: calc(100% - 140px);
-        margin: 0 auto;
-    }
-}
-
 .tour_1 {
     width: 100%;
     min-height: 17vh;
@@ -329,7 +221,7 @@
     width: 100%;
     min-height: 25vh;
     float: left;
-    background-image: url("https://ati.az/storage/1511/lahic.jpg");
+    background-image: url("../img/Lahic.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -338,7 +230,7 @@
     width: 100%;
     min-height: 25vh;
     float: left;
-    background-image: url("https://ati.az/storage/1515/shamahi-gabala.jpg");
+    background-image: url("../img/Shamahi-gabala.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -347,7 +239,7 @@
     width: 100%;
     min-height: 25vh;
     float: left;
-    background-image: url("https://ati.az/storage/1514/qobustan-+-absheron.jpg");
+    background-image: url("../img/Qobustan\,absheron.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -356,7 +248,7 @@
     width: 100%;
     min-height: 25vh;
     float: left;
-    background-image: url("https://ati.az/storage/1523/3-%D0%BD%D0%BE%D1%87%D0%B8-4-%D0%B4%D0%BD%D1%8F--1.jpg");
+    background-image: url("../img/3-ночи-4-дня--1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -365,7 +257,7 @@
     width: 100%;
     min-height: 25vh;
     float: left;
-    background-image: url("https://ati.az/storage/1524/3-%D0%BD%D0%BE%D1%87%D0%B8-4-%D0%B4%D0%BD%D1%8F--2.jpg");
+    background-image: url("../img/3-ночи-4-дня--2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -374,18 +266,26 @@
     width: 100%;
     min-height: 25vh;
     float: left;
-    background-image: url("https://ati.az/storage/1525/3-%D0%BD%D0%BE%D1%87%D0%B8-4-%D0%B4%D0%BD%D1%8F--3.jpg");
+    background-image: url("../img/3-ночи-4-дня--3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.card_e h3 {
+.stylyh3{
+    font-size: 20px;
     padding-top: 28vh;
     color: #417094;
+    font-weight: 600;
+}
+
+.styleh1{
+    color: #555;
+    font-size: 35px;
+    font-weight: 600;
 }
 
 .card_e p {
-    padding-top: 4vh;
+    padding-top: 2vh;
     line-height: 1.5em;
     color: #555;
 }
@@ -474,7 +374,7 @@
 .car1 {
     width: 43%;
     min-height: 20vh;
-    background-image: url('https://ati.az/storage/335/conversions/Mercedes-Sprinter-1-thumb.jpg');
+    background-image: url('../img/Mercedes-Sprinter-1-thumb.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     float: left;
@@ -485,7 +385,7 @@
 .car2 {
     width: 43%;
     min-height: 20vh;
-    background-image: url('https://ati.az/storage/340/conversions/Mercedes-Vito-2008-01-3-thumb.jpg');
+    background-image: url('../img/Mercedes-Vito-2008-01-3-thumb.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -497,7 +397,7 @@
 .car3 {
     width: 43%;
     min-height: 21vh;
-    background-image: url('https://ati.az/storage/346/conversions/Hyuindai-Santa-Fe-2010-01-1-thumb.jpg');
+    background-image: url('../img/Hyuindai-Santa-Fe-2010-01-1-thumb.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     float: left;
@@ -508,7 +408,7 @@
 .car4 {
     width: 43%;
     min-height: 21vh;
-    background-image: url('https://ati.az/storage/352/conversions/Toyota-Land-Cruiser-01-1-thumb.jpg');
+    background-image: url('../img/Toyota-Land-Cruiser-01-1-thumb.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -618,6 +518,7 @@
 
 .section_footer ul {
     padding-top: 2vh;
+    padding-left: 0px;
 }
 
 .section_footer ul a {
@@ -628,6 +529,11 @@
 
 .section_footer p {
     padding-top: 2vh;
+}
+
+.section_footer h3{
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .section_footer ul a li:hover {

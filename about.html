@@ -5,53 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная | Azerbaijan Travel International</title>
+    <title>О нас | Azerbaijan Travel International</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style_about.css">
+    <script>
+        (function ($) { // Begin jQuery
+            $(function () { // DOM ready
+                // If a link has a dropdown, add sub menu toggle.
+                $('nav ul li a:not(:only-child)').click(function (e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    // Close one dropdown when selecting another
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                });
+                // Clicking away from dropdown will remove the dropdown class
+                $('html').click(function () {
+                    $('.nav-dropdown').hide();
+                });
+                // Toggle open and close nav styles on click
+                $('#nav-toggle').click(function () {
+                    $('nav ul').slideToggle();
+                });
+                // Hamburger to X toggle
+                $('#nav-toggle').on('click', function () {
+                    this.classList.toggle('active');
+                });
+            }); // end DOM ready
+        })(jQuery); // end jQuery
+    </script>
 </head>
 
 <body>
-    <div class="navbar_main">
-        <div class="navbar_center">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo_white.png" alt="">
-                </a>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <img width="170px" height="40px" src="img/logo.png" alt="">
             </div>
-            <div class="menu">
-                <ul>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
                     <li>
                         <a href="index.html">Главная</a>
-                    </li>
-                    <li>
-                        <a href="">Туры
-                            <i class="bi bi-chevron-down"></i>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="">Однодневные туры</a>
-                            </li>
-                            <li>
-                                <a class="grap1" href="">Многодневные туры</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#tour_3">Трансферы</a>
                     </li>
                     <li>
                         <a href="about.html">О нас</a>
                     </li>
                     <li>
-                        <a href="">Контакт</a>
+                        <a href="#!">Туры</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="index.html#tour_1">Однодневные туры</a>
+                            </li>
+                            <li>
+                                <a href="index.html#tour_2">Многодневные туры</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="index.html#tour_3">Трансферы</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Контакт</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </div>
-    <div class="black_line"></div>
+    </section>
     <div class="about1">
-        <h1>О нас</h1>
+        <h1 class="h1_e">О нас</h1>
     </div>
     <div class="main_section1">
         <div class="section1">
@@ -59,24 +83,24 @@
             <p>Возможно, это не первый и, мы уверены, не последний сайт, который Вы посетили для того, чтобы узнать о предоставляемых туристических услугах в Азербайджане. Ведь мы живём в информационном мире, и очень важно сделать правильный выбор. А посетив наш сайт, Вы поймёте, что Вы на верном пути!</p>
             <p><strong>Azerbaijan Travel International</strong> — туристическая компания, которая специализируется на организации мероприятий и конференций, отдыха и деловых поездок для корпоративных клиентов и для частных лиц.</p>
             <p><strong>Azerbaijan Travel International</strong> является преуспевающей компанией. Её методом является постоянное внедрение инноваций.  А цель компании — чтобы гости получили много ярких впечатлений от нашей страны и максимум удобства от наших услуг.</p>
-            <p><strong>Azerbaijan Travel International</strong> пользуется своей налаженной системой <a href="">групповых</a> и <a href="">многодневных туров</a>. В отличие от других компаний, даже если Вас всего двое, то Вам обязательно предоставят эти услуги и, самое главное, качественно и по нормальной цене.</p>
-            <p>Azerbaijan Travel International предлагает Вам туры, организованные не благодаря субагентам, фрилансерам, наёмным водителям транспортных средств и т.д, а благодаря предоставлению собственных услуг. Мы располагаем штатом гидов, водителей и других специалистов, а также штатными транспортными средствами. Это отличие позволяет компании обеспечить максимальный контроль за качеством предоставляемых ею услуг.</p>
+            <p><strong>Azerbaijan Travel International</strong> пользуется своей налаженной системой <a href="404.html">групповых</a> и <a href="index.html#tour_2">многодневных туров</a>. В отличие от других компаний, даже если Вас всего двое, то Вам обязательно предоставят эти услуги и, самое главное, качественно и по нормальной цене.</p>
+            <p style="margin-bottom: 5vh;">Azerbaijan Travel International предлагает Вам туры, организованные не благодаря субагентам, фрилансерам, наёмным водителям транспортных средств и т.д, а благодаря предоставлению собственных услуг. Мы располагаем штатом гидов, водителей и других специалистов, а также штатными транспортными средствами. Это отличие позволяет компании обеспечить максимальный контроль за качеством предоставляемых ею услуг.</p>
         </div>
     </div>
     <div class="main_section2">
         <div class="section2">
             <div class="about2">
-                <h1>Наш подход</h1>
+                <h1 class="h1_e">Наш подход</h1>
             </div>
             <p>Мы отличаемся тем, что у нас множество готовых тщательно разработанных вариаций туристических программ по Азербайджану, которые подходят для любого расклада дня и на любой вкус. Мы ценим время гостя: наши программы составлены так, чтобы показать Вам наиболее интересное в удобные сроки.</p>
             <p>Мы организовываем как индивидуальные, так и групповые туры. Индивидуальные экскурсии по цене доступны далеко не всем путешественникам, или же доступны, но гость по ряду причин отдает предпочтение коллективной экскурсии. Принимая во внимание разные предпочтения, мы разработали уникальную систему групповых туров, которые не могут не состояться. Главная особенность этих экскурсий – это то, что они открыты для Вас всегда. Даже если гостей всего двое, они никогда не получат отказ из-за недобора группы. И что примечательно — Вы приобретаете такую экскурсию по приемлемой цене. Подробная программа каждой из таких экскурсий описаны в разделе <a href="">групповые туры</a>.</p>
-            <p>Более детально можете ознакомиться с программами в разделе <a href="">многодневных туров</a>. Они включают: встречу в аэропорту, проживание в отеле (бронируете на собственный выбор), ежедневные экскурсионные поездки, которые включают в себя питание (набор национальных блюд), все связанные с туром входные билеты, услуги профессионального гида и трансферные услуги.</p>
+            <p style="margin-bottom: 5vh;">Более детально можете ознакомиться с программами в разделе <a href="index.html#tour_2">многодневных туров</a>. Они включают: встречу в аэропорту, проживание в отеле (бронируете на собственный выбор), ежедневные экскурсионные поездки, которые включают в себя питание (набор национальных блюд), все связанные с туром входные билеты, услуги профессионального гида и трансферные услуги.</p>
         </div>
     </div>
     <div class="main_section3">
         <div class="section3">
             <div class="about3">
-                <h1>Почему нас выбирают?</h1>
+                <h1 class="h1_e" style="color: #555;">Почему нас выбирают?</h1>
                 <ul>
                     <li>
                         Мы предоставляем наиболее полную информацию о приобретенных пакетах. С нами вы не столкнетесь с какими-либо сюрпризами или неточностями. Вы обязательно получите то, что вам было обещано!
@@ -100,20 +124,20 @@
     <div class="main_section4">
         <div class="section4">
             <div class="about3">
-                <h1>Наша команда</h1>
+                <h1 class="h1_e" style="color: #555;">Наша команда</h1>
                 <p>Компания серьёзно относится к своей кадровой политике, так как это является одним из главных факторов, обеспечивающих высококачественные туристические продукты. Все сотрудники компании, включая гидов, водителей и других специалистов прошли через тщательный отбор и являются штатными сотрудниками на протяжении довольно долгого времени, что помогает обеспечить их высокий профессионализм.</p>
-                <h1>Как к нам присоединиться</h1>
-                <p><strong>Azerbaijan Travel International</strong> всегда открыта для продуктивного партнерства с другими предприятиями находящимися как в Азербайджане, так и за ее пределами. Желающих сотрудничать с нами просим отправить предложение по электронной почте <a href="">info@ati.az</a></p>
-                <h1>Стать партнером</h1>
-                <p><strong>Azerbaijan Travel International</strong> всегда открыта для продуктивного партнерства с другими предприятиями находящимися как в Азербайджане, так и за ее пределами. Желающих сотрудничать с нами просим отправить предложение по электронной почте <a href="">info@ati.az</a></p>
+                <h1 class="h1_e" style="color: #555;">Как к нам присоединиться</h1>
+                <p><strong>Azerbaijan Travel International</strong> всегда открыта для продуктивного партнерства с другими предприятиями находящимися как в Азербайджане, так и за ее пределами. Желающих сотрудничать с нами просим отправить предложение по электронной почте <a href="#">info@ati.az</a></p>
+                <h1 class="h1_e" style="color: #555;">Стать партнером</h1>
+                <p><strong>Azerbaijan Travel International</strong> всегда открыта для продуктивного партнерства с другими предприятиями находящимися как в Азербайджане, так и за ее пределами. Желающих сотрудничать с нами просим отправить предложение по электронной почте <a href="#">info@ati.az</a></p>
             </div>
         </div>
     </div>
     <div class="footer">
         <div class="block_footer">
             <div class="section_footer">
-                <a href="">
-                    <img src="https://ati.az/new-assets/img/site/logo_white.png" alt="">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
                 </a>
                 <span>Туристическая компания, которая специализируется на организации мероприятий и конференций,
                     командных игр, отдыха и деловых поездок для корпоративных клиентов и для частных лиц в
@@ -135,27 +159,27 @@
                 </div>
             </div>
             <div class="section_footer1">
-                <a href="">
-                    <img width="170px" src="https://ati.az/new-assets/tripadvisor-certificate-of-excellence-white-1.png"
+                <a href="404.html">
+                    <img width="170px" src="img/certificate.png"
                         alt="">
                 </a>
             </div>
             <div class="section_footer">
                 <h3>Ссылки</h3>
                 <ul>
-                    <a href="">
+                    <a href="about.html">
                         <li>О нас</li>
                     </a>
-                    <a href="">
+                    <a href="404.html">
                         <li>Политика конфиденциальности</li>
                     </a>
-                    <a href="">
+                    <a href="404.html">
                         <li>Соглашение</li>
                     </a>
-                    <a href="">
+                    <a href="404.html">
                         <li>Обратная связь</li>
                     </a>
-                    <a href="">
+                    <a href="404.html">
                         <li>Стать партнером</li>
                     </a>
                 </ul>
